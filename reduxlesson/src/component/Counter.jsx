@@ -4,7 +4,7 @@ import { increment, decrement } from '../slices/counterSlice';
 
 export default function Counter() {
     const dispatch = useDispatch();
-    const count = useSelector(state => state.counter.count);
+    const { count } = useSelector(state => state.counter);
 
     const onUpClick = () => {
         dispatch(increment());
